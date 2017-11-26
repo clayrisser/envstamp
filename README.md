@@ -21,7 +21,6 @@ Assume you have the following template at `/my/custom/template.txt`
 
 ```
 Hello ${WOLRD}
-
 ```
 
 Run the following . . .
@@ -29,7 +28,6 @@ Run the following . . .
 ```sh
 export WOLRD=universe
 envstamp /my/custom/template.txt
-
 ```
 
 All environment variables have been replaced in `/my/custom/template.txt`
@@ -38,11 +36,9 @@ All environment variables have been replaced in `/my/custom/template.txt`
 cat /my/custom/template.txt
 
 # Hello galaxy
-
 ```
 
 To set a default value when an environment variable does not exist, use the following syntax
 ```
 Hello ${WORLD:universe}
-
 ```
