@@ -32,7 +32,7 @@ Hello ${WOLRD}
 Run the following . . .
 
 ```sh
-export WOLRD=universe
+export WOLRD=galaxy
 envstamp /my/custom/template.txt
 ```
 
