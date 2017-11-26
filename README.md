@@ -8,8 +8,8 @@ image using environment variables
 ## Install
 
 ```sh
-curl -L -o /bin/envstamp https://github.com/jamrizzi/envstamp/releases/download/v0.1.0/envstamp
-chmod +x /bin/envstamp
+sudo curl -L -o /bin/envstamp https://github.com/jamrizzi/envstamp/releases/download/v0.1.0/envstamp
+sudo chmod +x /bin/envstamp
 ```
 
 
