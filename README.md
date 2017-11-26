@@ -5,13 +5,19 @@ Make docker containers configurable with environment variables
 This was built to make it easier to modify config files in a docker
 image using environment variables
 
+## Install
 
-## Installation
+```sh
+curl -L -o /bin/envstamp https://github.com/jamrizzi/envstamp/releases/download/v0.1.0/envstamp
+chmod +x /bin/envstamp
+```
+
+
+## Build
 
 ```sh
 git clone https://github.com/jamrizzi/envstamp.git
 make build
-sudo make install
 ```
 
 
