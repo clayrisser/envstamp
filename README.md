@@ -1,6 +1,6 @@
 # envstamp
 
-Make docker containers configurable with environment variables
+Make docker containers easily configurable with environment variables
 
 This was built to make it easier to modify config files in a docker
 image using environment variables
