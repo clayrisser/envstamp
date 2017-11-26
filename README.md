@@ -1,6 +1,6 @@
 # envstamp
 
-Stamp out templates from environment variables
+Make docker containers configurable with environment variables
 
 This was built to make it easier to modify config files in a docker
 image using environment variables
