@@ -12,10 +12,39 @@ func main() {
 	if len(os.Args) < 2 {
 		log.Fatal("Must supply file path as argument")
 	}
-	filePath := os.Args[1]
+	path := os.Args[1]
+	stampPath(path)
+}
+
+func stampPath(path string) {
+	if isDir(path) {
+		files, err := ioutil.ReadDir(path)
+		if err != nil {
+			log.Fatal(err)
+		}
+		for _, f := range files {
+			currentPath := path + "/" + f.Name()
+			if isDir(currentPath) {
+				stampPath(currentPath)
+			} else {
+				stampFile(currentPath)
+			}
+		}
+	} else {
+		stampFile(path)
+	}
+}
+
+func stampFile(filePath string) {
+	log.Printf("Stamping " + filePath)
 	template := loadTemplate(filePath)
 	content := setEnvsInTemplate(template)
 	writeFile(content, filePath)
+}
+
+func isDir(filePath string) bool {
+	fileInfo, _ := os.Stat(filePath)
+	return fileInfo.IsDir()
 }
 
 func loadTemplate(filePath string) string {
